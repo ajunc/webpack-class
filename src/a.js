@@ -1,1 +1,2 @@
-export default a = 'aaaaaaaaaa'
+let a = 'aaaaaaaaaa'
+export default a
