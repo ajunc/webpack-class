@@ -1,5 +1,6 @@
 import css from "./style/index.less";
 import pic from "./images/logo.png";
+import b from './b.js'
 import(/**webpackChunkname pic */'./a.js').then(result=>{
   console.log(result.default)
 })

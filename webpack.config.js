@@ -9,6 +9,9 @@ module.exports = {
     filename: "[name]-[hash:6].js",
   },
   mode: "development",
+  optimization: {
+    usedExports: true,
+  },
   module: {
     rules: [
       {
@@ -57,15 +60,15 @@ module.exports = {
   },
   devtool: "inline-source-map",
   plugins: [
-    new htmlWebpackPlugin({
-      template: "./src/index.html",
-      filename: "index.html",
-      chunks: ["main"],
-    }),
+    // new htmlWebpackPlugin({
+    //   template: "./src/index.html",
+    //   filename: "index.html",
+    //   chunks: ["main"],
+    // }),
 
-    new CleanWebpackPlugin(),
-    new miniCssExtractPlugin({
-      filename: "css/index-[contenthash:6].css",
-    }),
+    // new CleanWebpackPlugin(),
+    // new miniCssExtractPlugin({
+    //   filename: "css/index-[contenthash:6].css",
+    // }),
   ],
 };
