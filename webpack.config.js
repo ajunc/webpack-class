@@ -15,6 +15,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test:/\.png$/,
+        use:[
+          {
+            loader:path.resolve(__dirname,"./png-loader.js"),
+            options:{
+              name:"hello"
+            }
+          }
+        ]
+      },
+      {
         test: /\.css$/,
         use: ["style-loader", "css-loader"],
       },
